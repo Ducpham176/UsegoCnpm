@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="usegoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ug_archive">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" />
+    <Property Name="idPost" Type="int" Nullable="false" />
+    <Property Name="createAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ug_collection_post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="id_onwser" Type="int" Nullable="false" />
+    <Property Name="createAt" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ug_comment">
+    <Key>
+      <PropertyRef Name="id_cmt" />
+    </Key>
+    <Property Name="id_cmt" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" />
+    <Property Name="idPost" Type="int" />
+    <Property Name="content" Type="nvarchar(max)" />
+    <Property Name="createAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ug_follow">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="id_onswer" Type="int" Nullable="false" />
+    <Property Name="createAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ug_like_post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="id_onwser" Type="int" Nullable="false" />
+    <Property Name="createAt" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ug_login_token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userId" Type="int" />
+    <Property Name="userAgent" Type="varchar" MaxLength="255" />
+    <Property Name="tokenLogin" Type="varchar" MaxLength="50" />
+    <Property Name="createAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ug_new_feeds">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="topic" Type="text" />
+    <Property Name="hot" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="255" />
+    <Property Name="content" Type="text" />
+    <Property Name="images" Type="text" />
+    <Property Name="views" Type="int" Nullable="false" />
+    <Property Name="hide" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="consequence" Type="varchar" MaxLength="5" />
+    <Property Name="createAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ug_power_point">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="80" />
+    <Property Name="tags" Type="varchar" MaxLength="255" />
+    <Property Name="images" Type="text" />
+    <Property Name="fileDownload" Type="varchar" MaxLength="150" />
+    <Property Name="views" Type="int" Nullable="false" />
+    <Property Name="createAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ug_respond_comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id_cmt" Type="int" />
+    <Property Name="userId" Type="int" />
+    <Property Name="idPost" Type="int" />
+    <Property Name="content" Type="text" />
+    <Property Name="createAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ug_save_old_avatars">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" />
+    <Property Name="avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="createAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ug_service">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id_trade" Type="int" />
+    <Property Name="userId" Type="int" />
+    <Property Name="id_onwser" Type="int" />
+    <Property Name="money_agrees" Type="int" />
+    <Property Name="status" Type="nvarchar" MaxLength="2" />
+    <Property Name="images" Type="ntext" />
+    <Property Name="files" Type="ntext" />
+    <Property Name="message" Type="ntext" />
+    <Property Name="createAt" Type="datetime" Nullable="false" />
+    <Property Name="acceptAt" Type="datetime" />
+    <Property Name="previewAt" Type="datetime" />
+    <Property Name="updateAt" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'usego.dbo.ug_setting' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ug_setting">
+          <Property Name="root_percent" Type="int" />
+          <Property Name="root_name_bank" Type="nvarchar" MaxLength="99" />
+          <Property Name="root_fullname_bank" Type="nvarchar" MaxLength="99" />
+          <Property Name="root_number_bank" Type="nvarchar" MaxLength="99" />
+          <Property Name="root_name_user" Type="nvarchar" MaxLength="99" />
+          <Property Name="root_logo_bank" Type="nvarchar" MaxLength="99" />
+          <Property Name="root_token" Type="nvarchar" MaxLength="255" />
+          <Property Name="createAt" Type="datetime" />
+        </EntityType>-->
+  <EntityType Name="ug_trade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userId" Type="int" />
+    <Property Name="id_onwser" Type="int" />
+    <Property Name="id_service" Type="int" />
+    <Property Name="code_trade" Type="nvarchar" MaxLength="25" />
+    <Property Name="coin" Type="int" />
+    <Property Name="trade_status" Type="nvarchar" MaxLength="20" />
+    <Property Name="status" Type="nvarchar" MaxLength="5" />
+    <Property Name="pay" Type="nvarchar" MaxLength="5" />
+    <Property Name="image_qr" Type="nvarchar" MaxLength="255" />
+    <Property Name="message" Type="text" />
+    <Property Name="name_bank" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_user" Type="nvarchar" MaxLength="60" />
+    <Property Name="number_bank" Type="nvarchar" MaxLength="150" />
+    <Property Name="createAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ug_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullName" Type="nvarchar" MaxLength="80" />
+    <Property Name="email" Type="nvarchar" MaxLength="80" />
+    <Property Name="password" Type="nvarchar" MaxLength="80" />
+    <Property Name="coin" Type="int" />
+    <Property Name="token" Type="nvarchar" MaxLength="50" />
+    <Property Name="activeToken" Type="nvarchar" MaxLength="50" />
+    <Property Name="forgotToken" Type="nvarchar" MaxLength="50" />
+    <Property Name="firstLogin" Type="nvarchar" MaxLength="5" />
+    <Property Name="status" Type="int" />
+    <Property Name="avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="describes" Type="text" />
+    <Property Name="ug_type" Type="int" />
+    <Property Name="createAt" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="usegoModelStoreContainer">
+    <EntitySet Name="ug_archive" EntityType="Self.ug_archive" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_collection_post" EntityType="Self.ug_collection_post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_comment" EntityType="Self.ug_comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_follow" EntityType="Self.ug_follow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_like_post" EntityType="Self.ug_like_post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_login_token" EntityType="Self.ug_login_token" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_new_feeds" EntityType="Self.ug_new_feeds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_power_point" EntityType="Self.ug_power_point" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_respond_comment" EntityType="Self.ug_respond_comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_save_old_avatars" EntityType="Self.ug_save_old_avatars" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_service" EntityType="Self.ug_service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_trade" EntityType="Self.ug_trade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ug_users" EntityType="Self.ug_users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

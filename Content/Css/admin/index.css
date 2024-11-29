@@ -1,0 +1,157 @@
+﻿.wrapper-header {
+    backdrop-filter: unset;
+    box-shadow: none;
+    -webkit-backdrop-filter: saturate(180%) blur(6px);
+    backdrop-filter: saturate(180%) blur(6px);
+    background: rgba(255,255,255,0.9);
+    border-bottom: 0px solid #e8ebed00;
+}
+
+.header_center #directional li a {
+    color: #222;
+}
+
+.block {
+    margin-top: 48px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), linear-gradient(356deg, #FFF 45.19%, rgba(255, 255, 255, 0.00) 98.91%), linear-gradient(90deg, #FFD6004D -9.28%, #ff0e0e4D 30.8%, #bd00ff4D 63.88%, #3300ff4D 99.4%) !important;
+    background-size: 200% 200%, 285% 500%, 285% 500%, cover, cover;
+    background-position: bottom left, 109% 68%, 109% 68%, center, center;
+}
+
+.wrapper-header .header-right .search .search-click {
+    color: rgb(3, 3, 3);
+    background: rgba(51, 51, 51, 0.12);
+    color: var(--black);
+}
+
+    .wrapper-header .header-right .search .search-click span {
+        color: var(--black);
+    }
+
+.wrapper-header .header-right span {
+    color: rgb(3, 3, 3) !important;
+}
+
+.header_center #directional li .line {
+    border: 2px solid var(--main);
+}
+
+/* --------- Header --------- */
+
+.container-footer {
+    margin-top: 0 !important;
+}
+
+.dashboard-wrapper {
+    display: flex;
+}
+
+.dashboard-left {
+    color: #464646;
+    box-shadow: none;
+    background-image: none;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    width: 270px;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    outline: 0px;
+    background: linear-gradient(to bottom, #ffffff7d 87%, transparent);
+    transition: width 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff6f;
+    border-right: 2px solid var(--white);
+    box-shadow: 0 1px 5px rgba(8, 114, 246, 0.04);
+}
+
+    .dashboard-left .dashboard-lists {
+        padding: 0 24px 24px 24px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+        .dashboard-left .dashboard-lists .title {
+            box-sizing: border-box;
+            list-style: none;
+            font-weight: 700;
+            font-size: 0.75rem;
+            line-height: 26px;
+            text-transform: uppercase;
+            margin-top: 24px;
+            margin-bottom: 0px;
+            padding: 3px 12px;
+            margin-left: -10px;
+        }
+
+        .dashboard-left .dashboard-lists .item-dashboard {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dashboard-left .dashboard-lists .btn-dashboard {
+            justify-content: space-between;
+            transition: all .2s ease
+        }
+
+        .dashboard-left .dashboard-lists .item-dashboard a, button {
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-sizing: border-box;
+            text-align: left;
+            outline: 0px;
+            color: rgb(53 53 53);
+            font-size: 15.5px;
+            margin: 0px 0px 2px;
+            transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            padding: 12px 10px;
+            border-radius: 7px;
+            transition: all .2s ease
+        }
+
+        .dashboard-left .dashboard-lists .btn-dashboard i {
+            font-size: 11.5px;
+            color: rgb(53 53 53);
+        }
+
+        .dashboard-left .dashboard-lists .item-dashboard .btn-dashboard:hover {
+            background: linear-gradient(to left, transparent, #00000006)
+        }
+
+        .dashboard-left .dashboard-lists .item-dashboard .btn-dashboard.active {
+            background: #f1f1f199;
+            border-top: 2px solid var(--white);
+            box-shadow: 0 1px 5px rgb(106 106 106 / 11%);
+        }
+
+        .dashboard-left .dashboard-lists .item-dashboard ul {
+            display: none;
+            margin-left: 5px;
+        }
+
+            .dashboard-left .dashboard-lists .item-dashboard ul.active {
+                display: block;
+            }
+
+        .dashboard-left .dashboard-lists .item-dashboard .des-main {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+.dashboard-right {
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}

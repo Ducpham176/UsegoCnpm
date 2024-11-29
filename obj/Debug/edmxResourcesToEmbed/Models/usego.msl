@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="usegoModelStoreContainer" CdmEntityContainer="usegoEntities">
+    <EntitySetMapping Name="ug_archive">
+      <EntityTypeMapping TypeName="usegoModel.ug_archive">
+        <MappingFragment StoreEntitySet="ug_archive">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_collection_post">
+      <EntityTypeMapping TypeName="usegoModel.ug_collection_post">
+        <MappingFragment StoreEntitySet="ug_collection_post">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id_onwser" ColumnName="id_onwser" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_comment">
+      <EntityTypeMapping TypeName="usegoModel.ug_comment">
+        <MappingFragment StoreEntitySet="ug_comment">
+          <ScalarProperty Name="id_cmt" ColumnName="id_cmt" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_follow">
+      <EntityTypeMapping TypeName="usegoModel.ug_follow">
+        <MappingFragment StoreEntitySet="ug_follow">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id_onswer" ColumnName="id_onswer" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_like_post">
+      <EntityTypeMapping TypeName="usegoModel.ug_like_post">
+        <MappingFragment StoreEntitySet="ug_like_post">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id_onwser" ColumnName="id_onwser" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_login_token">
+      <EntityTypeMapping TypeName="usegoModel.ug_login_token">
+        <MappingFragment StoreEntitySet="ug_login_token">
+          <ScalarProperty Name="userAgent" ColumnName="userAgent" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="tokenLogin" ColumnName="tokenLogin" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_new_feeds">
+      <EntityTypeMapping TypeName="usegoModel.ug_new_feeds">
+        <MappingFragment StoreEntitySet="ug_new_feeds">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="hot" ColumnName="hot" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="images" ColumnName="images" />
+          <ScalarProperty Name="views" ColumnName="views" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="consequence" ColumnName="consequence" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_power_point">
+      <EntityTypeMapping TypeName="usegoModel.ug_power_point">
+        <MappingFragment StoreEntitySet="ug_power_point">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="tags" ColumnName="tags" />
+          <ScalarProperty Name="images" ColumnName="images" />
+          <ScalarProperty Name="fileDownload" ColumnName="fileDownload" />
+          <ScalarProperty Name="views" ColumnName="views" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_respond_comment">
+      <EntityTypeMapping TypeName="usegoModel.ug_respond_comment">
+        <MappingFragment StoreEntitySet="ug_respond_comment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_cmt" ColumnName="id_cmt" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_save_old_avatars">
+      <EntityTypeMapping TypeName="usegoModel.ug_save_old_avatars">
+        <MappingFragment StoreEntitySet="ug_save_old_avatars">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_service">
+      <EntityTypeMapping TypeName="usegoModel.ug_service">
+        <MappingFragment StoreEntitySet="ug_service">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_trade" ColumnName="id_trade" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id_onwser" ColumnName="id_onwser" />
+          <ScalarProperty Name="money_agrees" ColumnName="money_agrees" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="images" ColumnName="images" />
+          <ScalarProperty Name="files" ColumnName="files" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+          <ScalarProperty Name="acceptAt" ColumnName="acceptAt" />
+          <ScalarProperty Name="previewAt" ColumnName="previewAt" />
+          <ScalarProperty Name="updateAt" ColumnName="updateAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_trade">
+      <EntityTypeMapping TypeName="usegoModel.ug_trade">
+        <MappingFragment StoreEntitySet="ug_trade">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id_onwser" ColumnName="id_onwser" />
+          <ScalarProperty Name="id_service" ColumnName="id_service" />
+          <ScalarProperty Name="code_trade" ColumnName="code_trade" />
+          <ScalarProperty Name="coin" ColumnName="coin" />
+          <ScalarProperty Name="trade_status" ColumnName="trade_status" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="pay" ColumnName="pay" />
+          <ScalarProperty Name="image_qr" ColumnName="image_qr" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="name_bank" ColumnName="name_bank" />
+          <ScalarProperty Name="name_user" ColumnName="name_user" />
+          <ScalarProperty Name="number_bank" ColumnName="number_bank" />
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ug_users">
+      <EntityTypeMapping TypeName="usegoModel.ug_users">
+        <MappingFragment StoreEntitySet="ug_users">
+          <ScalarProperty Name="createAt" ColumnName="createAt" />
+          <ScalarProperty Name="ug_type" ColumnName="ug_type" />
+          <ScalarProperty Name="describes" ColumnName="describes" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="firstLogin" ColumnName="firstLogin" />
+          <ScalarProperty Name="forgotToken" ColumnName="forgotToken" />
+          <ScalarProperty Name="activeToken" ColumnName="activeToken" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="coin" ColumnName="coin" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

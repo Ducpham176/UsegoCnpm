@@ -1,0 +1,159 @@
+﻿.dashboard-right .form-control-add {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    gap: 10px;
+}
+
+    .dashboard-right .form-control-add .form-group {
+        width: 100%;
+        border-radius: 7px;
+        background: #ffffff7d;
+        border-top: 1px solid rgba(255, 255, 255, .22);
+        border-right: 1px solid rgba(255, 255, 255, .22);
+        border-bottom: 1px solid rgba(255, 255, 255, .22);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        box-shadow: inset 0 0 0.5px 1px hsl(0deg 0% 100% / 7.5%), 0 0 0 1px hsl(0deg 0% 100% / 5%), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02), 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsl(0deg 0% 100% / 9%);
+        background: #ffffff6f;
+        border: 2px solid var(--white);
+        box-shadow: 0 1px 5px rgba(8, 114, 246, 0.04);
+    }
+
+        .dashboard-right .form-control-add .form-group:nth-child(2) {
+            width: 45px;
+        }
+
+        .dashboard-right .form-control-add .form-group label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            border-radius: 7px;
+            width: 45px;
+        }
+
+        .dashboard-right .form-control-add .form-group .topic-image {
+            background: red;
+        }
+
+    .dashboard-right .form-control-add input[name="name"] {
+        all: unset;
+        height: 45px;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 15px;
+        border-radius: 7px;
+    }
+
+
+.wrapper .form-control ul {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+    .wrapper .form-control ul li {
+        display: flex;
+        box-sizing: border-box;
+        overflow-y: auto;
+        border-radius: 7px;
+        background: #ffffff7d;
+        border-top: 1px solid rgba(255, 255, 255, .22);
+        border-right: 1px solid rgba(255, 255, 255, .22);
+        border-bottom: 1px solid rgba(255, 255, 255, .22);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        box-shadow: inset 0 0 0.5px 1px hsl(0deg 0% 100% / 7.5%), 0 0 0 1px hsl(0deg 0% 100% / 5%), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02), 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsl(0deg 0% 100% / 9%);
+        background: #ffffff6f;
+        border: 2px solid var(--white);
+        box-shadow: 0 1px 5px rgba(8, 114, 246, 0.04);
+    }
+
+        .wrapper .form-control ul li .info {
+            display: flex;
+            align-items: center;
+            flex-basis: 80%;
+            display: flex;
+        }
+
+            .wrapper .form-control ul li .info .form-group {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+
+                .wrapper .form-control ul li .info .form-group:nth-child(1) {
+                    width: calc(100% - 45px);
+                    height: 100%;
+                }
+
+                    .wrapper .form-control ul li .info .form-group:nth-child(1) input {
+                        all: unset;
+                        width: 100%;
+                        font-size: 15px;
+                        height: 100%;
+                        padding-left: 10px;
+                    }
+
+            .wrapper .form-control ul li .info .img-frame {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 45px;
+                width: 45px;
+                padding: 5px;
+                box-sizing: border-box;
+                background-size: contain !important;
+                background-repeat: no-repeat !important;
+                background-position: 50% 100% !important;
+                object-fit: contain;
+                cursor: pointer;
+            }
+
+            .wrapper .form-control ul li .info .form-group:nth-child(2) {
+                transition: all .2s ease
+            }
+
+            .wrapper .form-control ul li .info:hover .form-group:nth-child(2) {
+                opacity: 0.5
+            }
+
+            .wrapper .form-control ul li .info .img-frame img {
+                height: 100%;
+                object-fit: contain;
+            }
+
+        .wrapper .form-control ul li .more {
+            flex-basis: 20%;
+            display: flex;
+        }
+
+            .wrapper .form-control ul li .more button {
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 10px;
+                transition: all .2s ease
+            }
+
+                .wrapper .form-control ul li .more button svg {
+                    height: 24px;
+                    width: 24px
+                }
+
+                .wrapper .form-control ul li .more button:hover {
+                    opacity: 0.5
+                }
+
+
+.tags .form-control:nth-child(2) {
+    display: flex;
+    background: var(--white);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgb(183 183 183 / 20%
+}

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="usegoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ug_archive">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="idPost" Type="Int32" Nullable="false" />
+    <Property Name="createAt" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ug_collection_post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="id_onwser" Type="Int32" Nullable="false" />
+    <Property Name="createAt" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ug_comment">
+    <Key>
+      <PropertyRef Name="id_cmt" />
+    </Key>
+    <Property Name="id_cmt" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="idPost" Type="Int32" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createAt" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ug_follow">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="id_onswer" Type="Int32" Nullable="false" />
+    <Property Name="createAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ug_like_post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="id_onwser" Type="Int32" Nullable="false" />
+    <Property Name="createAt" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ug_login_token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="tokenLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="createAt" Type="DateTime" Precision="3" />
+    <Property Name="userAgent" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ug_new_feeds">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="topic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="hot" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="images" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="views" Type="Int32" Nullable="false" />
+    <Property Name="hide" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="consequence" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="createAt" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ug_power_point">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="tags" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="images" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fileDownload" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="views" Type="Int32" Nullable="false" />
+    <Property Name="createAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ug_respond_comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id_cmt" Type="Int32" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="idPost" Type="Int32" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ug_save_old_avatars">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="createAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ug_service">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id_trade" Type="Int32" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="id_onwser" Type="Int32" />
+    <Property Name="money_agrees" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="images" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="files" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="acceptAt" Type="DateTime" Precision="3" />
+    <Property Name="previewAt" Type="DateTime" Precision="3" />
+    <Property Name="updateAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ug_trade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="id_onwser" Type="Int32" />
+    <Property Name="id_service" Type="Int32" />
+    <Property Name="code_trade" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="coin" Type="Int32" />
+    <Property Name="trade_status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pay" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="image_qr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="name_bank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name_user" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="number_bank" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="createAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="usegoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ug_archive" EntityType="Self.ug_archive" />
+    <EntitySet Name="ug_collection_post" EntityType="Self.ug_collection_post" />
+    <EntitySet Name="ug_comment" EntityType="Self.ug_comment" />
+    <EntitySet Name="ug_follow" EntityType="Self.ug_follow" />
+    <EntitySet Name="ug_like_post" EntityType="Self.ug_like_post" />
+    <EntitySet Name="ug_login_token" EntityType="Self.ug_login_token" />
+    <EntitySet Name="ug_new_feeds" EntityType="Self.ug_new_feeds" />
+    <EntitySet Name="ug_power_point" EntityType="Self.ug_power_point" />
+    <EntitySet Name="ug_respond_comment" EntityType="Self.ug_respond_comment" />
+    <EntitySet Name="ug_save_old_avatars" EntityType="Self.ug_save_old_avatars" />
+    <EntitySet Name="ug_service" EntityType="Self.ug_service" />
+    <EntitySet Name="ug_trade" EntityType="Self.ug_trade" />
+    <EntitySet Name="ug_users" EntityType="usegoModel.ug_users" />
+  </EntityContainer>
+  <EntityType Name="ug_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fullName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="coin" Type="Int32" />
+    <Property Name="token" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="activeToken" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="forgotToken" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firstLogin" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="describes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ug_type" Type="Int32" />
+    <Property Name="createAt" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>
